@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+	
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouton Like Amélioré</title>
+
+    <style>
+        /* Style des boutons */
+        button {
+            padding: 5px 10px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+
+        /* Animation au clic */
+        .like-anim {
+            transform: scale(1.15);
+            background-color: #ccffd6; /* vert très clair */
+        }
+
+        /* Bouton "Je n'aime plus" */
+        #bouton-unlike {
+            background-color: #ffe5e5; /* rose très clair */
+        }
+
+        #bouton-unlike.unlike-anim {
+            transform: scale(1.15);
+            background-color: #ffcccc;
+        }
+
+        /* Message temporaire */
+        .message-like {
+            opacity: 0;
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #28a745;
+            transition: opacity 0.4s ease;
+        }
+
+        .message-like.visible {
+            opacity: 1;
+        }
+		
+		.centered-img {
+            display: block;       /* Nécessaire pour margin auto */
+            margin: 0 auto;       /* Centre horizontalement */
+            max-width: 100%;      /* Évite le dépassement */
+        }
+    </style>
+
+	<title>Mon Portfolio - Eugénie</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <BODY bgcolor=F4C9FF></BODY>
+<h1> Bienvenue sur le portefolio d'Eugénie !</h1>
+<p><a href="index.html">← Retour à l'accueil </a> </p>
+</header>
+	<main>
+		<BR>Je m'appelle Eugénie Allègre, je suis née le 01/04/2010 à Paris. Je suis actuellement scolarisée à Notre Dame de Sion à Sait-Omer en classe de seconde.
+		<BR>J'ai deux petits frères agés de 11 et 14 ans qui se prenoment respectivement Octave et Maxence. Nous ne possedons pas d'animaux de compagnie, mais j'aime beaucoup les reptiles et les chats.
+		<BR>Je suis une personne curieuse, passionnée et déterminée. Je suis également très sociable et j'apprécie les échanges avec les autres, que ce soit pour partager des idées ou simplement passer du temps ensemble.
+		<img src="https://tse4.mm.bing.net/th/id/OIP.UQ0qd4VC-krve6DzzDbTOQHaHa?cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3" alt="logo nd de sion" widh="100" height="100" class="centered-img">
+    
+		<section>
+			<h2>À propos de moi</h2>
+			<h4>Mes passions</h4>
+			<p> Mes passions tournent autour de la lecture, de la musique et de la mode, trois domaines qui occupent une grande place dans ma vie.
+
+				<BR>J’aime particulièrement lire des romans policiers et les thrillers, parce que les enquêtes et les rebondissements me tiennent toujours en haleine. Je lis aussi beaucoup de new romance et de dark romance, des genres qui me permettent de m’évader et de vivre des histoires intenses à travers les personnages.
+				J'aime particuliairement Mary Higgins CLack, Frida McFadden pour les policiers et thrillers. Egalement Ana Huang, Morgane Mocombe et Sarah Rivens pour les new romance et dark romance.
+				<BR>Côté musique, même si la pop reste mon style préféré, je suis assez curieuse et j’écoute vraiment un peu de tout. Découvrir de nouveaux artistes ou de nouveaux sons me plaît beaucoup, et ça accompagne souvent mes journées.
+				<BR>En ce qui concerne la mode, j’aime suivre les tendances et exprimer ma créativité à travers mes tenues. J’adore mélanger les styles et trouver des pièces uniques qui reflètent ma personnalité. La mode est pour moi une forme d’art et un moyen de m’affirmer.
+			</p>
+			<h4>Mes projets</h4>
+				<p>En ce qui concerne mes projets, j’ai plusieurs idées en tête que j’aimerais réaliser dans les prochaines années. Tout d’abord, j’aimerais approfondir mes connaissances en littérature et peut-être même écrire mon propre roman un jour. J’ai toujours aimé raconter des histoires, et je pense que ce serait une expérience enrichissante de créer un univers à partir de zéro.
+				<BR>En parallèle, je m’intéresse aussi beaucoup à la cybersécurité. C’est un domaine qui évolue très vite et qui joue un rôle essentiel dans notre société actuelle. Protéger des données, comprendre les menaces numériques et contribuer à la sécurité des systèmes informatiques sont des missions qui me passionnent. 
+				<BR>J’aimerais donc, si possible, me diriger également vers cette voie ou trouver un moyen de concilier ces deux univers qui me plaisent pour des raisons différentes.
+			</p>
+		</section>
+	</main>
+<footer>
+        <p>© 2026 - Eugénie | Fait avec passion</p>
+
+        <button id="mon-bouton-like">❤ J'aime (0)</button>
+        <button id="bouton-unlike">💔 Je n'aime plus</button>
+
+        <div id="message-like" class="message-like"></div>
+
+        <script src="script.js"></script>
+    </footer>
+</body>
+</html>
