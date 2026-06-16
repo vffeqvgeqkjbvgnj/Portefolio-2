@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  // --- Récupération du compteur sauvegardé ---
 let nbLikes = localStorage.getItem("nbLikes");
 if (!nbLikes) nbLikes = 0;
@@ -44,3 +45,25 @@ boutonUnlike.addEventListener("click", () => {
     message.classList.add("visible");
     setTimeout(() => message.classList.remove("visible"), 2000);
 });
+=======
+// Compteur de clics personnalisé
+let nbLikes = 0;
+const boutonLike = document.getElementById("mon-bouton-like");
+
+if (boutonLike) {
+    boutonLike.addEventListener("click", () =>{
+        nbLikes = nbLikes + 1;
+boutonLike.textContent = "❤️ J'aime (" + nbLikes + ")";
+});
+}
+// Compteur de clics personnalisé
+let nbdisLikes = 0;
+const boutondisLike = document.getElementById("mon-bouton-dislike");
+
+if (boutondisLike) {
+    boutondisLike.addEventListener("click", () =>{
+        nbdisLikes = nbdisLikes + 1;
+boutondisLike.textContent = "💔 Je n'aime pas (" + nbdisLikes + ")";
+});
+}
+>>>>>>> cb416906c24048f7e86947e983f4d5230440b843
