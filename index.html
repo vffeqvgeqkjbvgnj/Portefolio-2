@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Nos Portfolios</title>
+		<link rel="stylesheet" href="style.css">
+	<style> 
+	/* Change la couleur de ton titre principal en rouge ou bleu */
+		header h1 {
+		color: #000000;
+		}
+	/* Change la couleur de fond de ta page */
+		body {
+		background-color: #D9C9A0;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1> Bienvenue sur notre site </h1>
+	<main>
+		<section>
+			<div class="skills-container">
+				<div class="skill-tag"> Jeux Vidéo </div>
+				<div class="skill-tag"> Sport </div>
+				<div class="skill-tag"> Musique </div>
+			</div>
+
+			<p><a href="eugenie.html"> → Découvrez le portfolio d'Eugénie </a></p>
+			<p><a href="antoine.html"> → Découvrez le portfolio d'Antoine </a></p>
+			<p><a href="celina.html"> → Découvrez le portfolio de Célina </a></p>
+			<p><a href="clément.html"> → Découvrez le portfolio de Clément </a></p>
+	
+	
+    
+</section>
+</main>
+<footer>
+	<p>© 2026 -  | Fait avec passion</p>
+	
+        <button id="mon-bouton-like">❤ J'aime (0)</button>
+        <button id="bouton-unlike">💔 Je n'aime plus</button>
+
+        <div id="message-like" class="message-like"></div>
+
+        <script>
+            // --- Récupération du compteur sauvegardé ---
+            let nbLikes = localStorage.getItem("nbLikes");
+            if (!nbLikes) nbLikes = 0;
+
+            const boutonLike = document.getElementById("mon-bouton-like");
+            const boutonUnlike = document.getElementById("bouton-unlike");
+            const message = document.getElementById("message-like");
+
+            // Affichage initial
+            boutonLike.textContent = "❤ J'aime (" + nbLikes + ")";
+
+            // --- Clic sur "J'aime" ---
+            boutonLike.addEventListener("click", () => {
+                nbLikes++;
+                localStorage.setItem("nbLikes", nbLikes);
+
+                boutonLike.textContent = "❤ J'aime (" + nbLikes + ")";
+
+                // Animation
+                boutonLike.classList.add("like-anim");
+                setTimeout(() => boutonLike.classList.remove("like-anim"), 300);
+
+                // Message temporaire
+                message.textContent = "Merci pour votre soutien ❤️";
+                message.classList.add("visible");
+                setTimeout(() => message.classList.remove("visible"), 2000);
+            });
+
+            // --- Clic sur "Je n'aime plus" ---
+            boutonUnlike.addEventListener("click", () => {
+                if (nbLikes > 0) {
+                    nbLikes--;
+                    localStorage.setItem("nbLikes", nbLikes);
+                }
+
+                boutonLike.textContent = "❤ J'aime (" + nbLikes + ")";
+
+                // Animation
+                boutonUnlike.classList.add("unlike-anim");
+                setTimeout(() => boutonUnlike.classList.remove("unlike-anim"), 300);
+
+                // Message temporaire
+                message.textContent = "Votre like a été retiré 💔";
+                message.classList.add("visible");
+                setTimeout(() => message.classList.remove("visible"), 2000);
+        }
+    </script>
+</footer>
+</body>
+</html>
