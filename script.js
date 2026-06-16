@@ -4,7 +4,7 @@ const boutonLike = document.getElementById("mon-bouton-like");
 
 if (boutonLike) {
     boutonLike.addEventListener("click", () =>{
-        nbLikes = nbLikes + 1;
+        nbLikes = nbLikes + 1; 
 boutonLike.textContent = "❤️ J'aime (" + nbLikes + ")";
 });
 }
@@ -14,7 +14,7 @@ const boutondisLike = document.getElementById("mon-bouton-dislike");
 
 if (boutondisLike) {
     boutondisLike.addEventListener("click", () =>{
-        nbdisLikes = nbdisLikes + 1;
+        nbdisLikes = nbdisLikes + 1; 
 boutondisLike.textContent = "💔 Je n'aime pas (" + nbdisLikes + ")";
 });
 }
