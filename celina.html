@@ -1,38 +1,105 @@
-<! DOCTYPE HTML>
-<HTML lang=« fr »>
-<Tête>
-    <Meta Charset=« UTF-8 »>
-    <Meta Nom=« Hublot » Contenu=« largeur = largeur de dispositif, échelle initiale = 1,0 »>
-    <Titre>Mon Portfolio - Célina</Titre>
-    <lien Rel=« feuille de style » HFF=« style.css »>
-</Tête>
-<Carrosserie>
-<En-tête>
-<BODY bgcolor=#E3A1C2></BODY>
-    <H1> Bienvenue sur le site de Célina !</H1>
-        <p><a HFF=« index.html »>← Retour à l’accueil</a></p>
-</En-tête>
+<!DOCTYPE html>
 
-<Principaux>
----- Ta présentation -->
-Je m'appelle Célina, j'ai 15 ans je suis née le 25/01/2011, je suis en seconde au lycée Saint Rémi à Roubaix 
-<Section>
-    <h2>À propos de moi</h2>
-        <p>Mes passions:
-        <p>j'aime l'informatique 
-        <p>j'aime beaucoup l'algérie qui est mon pays d'origine 
-        <p>j'aime lire les dark roamnce et les new romance
-        <p>Je pratique du volley et de l'escalade en club 
-<Section>
+<html lang="fr">
 
-        <img src="https://i.pinimg.com/originals/de/1a/0c/de1a0ca32e611a680e2e4e5f27c380ac.jpg" alt="tahia djazair" width = "200" height =" 200">
-    </Section>
-</Principaux>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Célina</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-<pied de page>
-    <p>© 2026 - [Célina] | Fait avec passion</p>
-</pied de page>
+<body>
 
-<Script SRC=« script.js »></Script>
-</Carrosserie>
-</HTML>
+```
+<nav>
+    <h2>💻 Célina</h2>
+    <ul>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#passions">Passions</a></li>
+        <li><a href="#skills">Compétences</a></li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <img src="https://i.pinimg.com/originals/de/1a/0c/de1a0ca32e611a680e2e4e5f27c380ac.jpg" alt="Photo">
+    <h1 id="typing"></h1>
+    <p>Lycéenne passionnée par l'informatique et la cybersécurité 🚀</p>
+</header>
+
+<section id="about">
+    <h2>👋 À propos de moi</h2>
+    <p>
+        Je m'appelle Célina, j'ai 15 ans et je suis en seconde au lycée Saint Rémi à Roubaix.
+        J'aime apprendre de nouvelles choses et découvrir le monde de l'informatique.
+    </p>
+</section>
+
+<section id="passions">
+    <h2>❤️ Mes passions</h2>
+
+    <div class="cards">
+        <div class="card">💻 Informatique</div>
+        <div class="card">🇩🇿 Algérie</div>
+        <div class="card">📚 Lecture</div>
+        <div class="card">🏐 Volley</div>
+        <div class="card">🧗 Escalade</div>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>🚀 Mes compétences</h2>
+
+    <div class="skill">
+        <p>PYTHON</p>
+        <div class="bar">
+            <div class="progress html"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <p>KABYLE</p>
+        <div class="bar">
+            <div class="progress css"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <p>ANGLAIS</p>
+        <div class="bar">
+            <div class="progress js"></div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>💡 Centres d'intérêt informatiques</h2>
+
+    <div class="skill-tag">⌨️ Programmation</div>
+    <div class="skill-tag">🔒 Cybersécurité</div>
+    <div class="skill-tag">🤖 Intelligence Artificielle</div>
+    <div class="skill-tag">🌐 Développement Web</div>
+    <div class="skill-tag">🐍 Python</div>
+</section>
+
+<section>
+    <h2>👍 Réactions</h2>
+
+    <button id="mon-bouton-like">❤️ J'aime (0)</button>
+    <button id="bouton-unlike">💔 Je n'aime plus</button>
+
+    <p id="message-like"></p>
+</section>
+
+<button id="topBtn">⬆️</button>
+
+<footer>
+    <p>© 2026 - Célina | Fait avec passion </p>
+</footer>
+
+<script src="script.js"></script>
+```
+
+</body>
+
+</html>
