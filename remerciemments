@@ -1,0 +1,112 @@
+from turtle import *
+
+ecran = Screen()
+ecran.setup(width=1200, height=700)
+ecran.bgcolor("#B274CF") 
+
+hideturtle()  
+up()          
+speed(0)      
+
+# Position vers la 1ere ligne
+goto(-330, 140)  
+
+# Dire Merci
+write("M", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("e", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("r", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("c", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("i", align="center", font=("Arial", 50, "bold"))
+forward(45)
+
+# Espace 
+forward(45)
+
+# Dire a
+write("a", align="center", font=("Arial", 50, "bold"))
+forward(45)
+
+# Espace 
+forward(45)
+
+# Dire l'
+write("l", align="center", font=("Arial", 50, "bold"))
+forward(20)
+write("'", align="center", font=("Arial", 50, "bold"))
+forward(35)
+
+# Dire Equipe
+write("E", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("q", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("u", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("i", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("p", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("e", align="center", font=("Arial", 50, "bold"))
+
+# Fais bouger la tortue vers la ligne suivante
+goto(-145, -10)  
+
+# Dire Epitech
+write("E", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("p", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("i", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("t", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("e", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("c", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("h", align="center", font=("Arial", 50, "bold"))
+
+# Fais bouger la tortue vers la ligne suivante
+goto(-260, -160)  
+
+# Dire pour
+write("p", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("o", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("u", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("r", align="center", font=("Arial", 50, "bold"))
+forward(45)
+
+# Espace 
+forward(45)
+
+# Dire ce
+write("c", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("e", align="center", font=("Arial", 50, "bold"))
+forward(45)
+
+# Espace
+forward(45)
+
+# Dire Stage
+write("s", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("t", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("a", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("g", align="center", font=("Arial", 50, "bold"))
+forward(45)
+write("e", align="center", font=("Arial", 50, "bold"))
+
+# Fais partir la tortue
+goto(5000, 5000)
+
+mainloop()
