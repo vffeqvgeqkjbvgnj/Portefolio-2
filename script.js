@@ -7,7 +7,6 @@ if (boutonLike) {
 boutonLike.textContent = "❤️ J'aime (" + nbLikes + ")";
 });
 }
-// Compteur de clics personnalisé
 let nbdisLikes = 0;
 const boutondisLike = document.getElementById("mon-bouton-dislike");
 

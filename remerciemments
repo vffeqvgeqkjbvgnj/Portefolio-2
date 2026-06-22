@@ -2,7 +2,7 @@ from turtle import *
 
 ecran = Screen()
 ecran.setup(width=1200, height=700)
-ecran.bgcolor("#B274CF") 
+ecran.bgcolor("#22d89a") #B274CF autre couleur
 
 hideturtle()  
 up()          
