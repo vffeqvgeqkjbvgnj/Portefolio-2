@@ -9,8 +9,6 @@ function setup() {
   snake.push([90, 110]);
   snake_direction = "right";
   
-  // Le setInterval a été retiré d'ici pour être mis dans keyPressed plus bas
-  
   apples = []
   create_apples()
 }
@@ -33,7 +31,6 @@ function draw_apples() {
  
 
 function keyPressed() {
-  // SI LE JEU N'EST PAS LANCÉ ET QU'ON APPUIE SUR S, ON LANCE LE JEU
   if (!jeuLance && (key === 's' || key === 'S')) {
     jeuLance = true;
     setInterval(() => {
@@ -52,7 +49,8 @@ function keyPressed() {
   } else if (keyCode == RIGHT_ARROW && snake_direction != "left") {
     snake_direction = "right";
   }
-return false; 
+
+  return false;
 }
 
 function next_direction() {
@@ -67,6 +65,7 @@ function next_direction() {
     snake_next_direction = [snake[0][0] + 10, snake[0][1]];
   }
 }
+
 function move_snake() {
   check_collision()
   head = snake[0]
@@ -76,6 +75,10 @@ function move_snake() {
       pos = apples.indexOf(apple)
       apples.splice(pos, 1)
       eat = true
+      
+      let new_x = Math.floor(random(0, 40));
+      let new_y = Math.floor(random(0, 40));
+      apples.push([new_x * 10, new_y * 10]);
     }
   });
   if (eat == false) {
