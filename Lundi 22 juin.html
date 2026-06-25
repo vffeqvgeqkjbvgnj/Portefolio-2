@@ -3,46 +3,179 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-    body {
-		background-color:#FAF0C5;
-		}
-        </style>
 <title>Lundi 22 juin</title>
-<link rel="stylesheet" href="style.css"></head>
+
+<!-- Icônes modernes -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    /* RESET */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Poppins", Arial, sans-serif;
+        background-color: #FAF0C5; /* TA COULEUR ORIGINALE */
+        color: #333;
+        line-height: 1.7;
+    }
+
+    /* HEADER */
+    header {
+        background: linear-gradient(135deg, #ffb86c, #ff6f61);
+        padding: 2.5rem 1rem;
+        text-align: center;
+        color: white;
+        border-radius: 0 0 25px 25px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    header a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+
+    /* MAIN */
+    main {
+        width: min(900px, 92%);
+        margin: 2rem auto;
+    }
+
+    /* SECTIONS */
+    section {
+        background: white;
+        padding: 1.8rem;
+        border-radius: 18px;
+        margin-bottom: 2rem;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+        animation: fadeIn 0.6s ease;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        color: #ff6f61;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    section p {
+        margin-bottom: 1rem;
+    }
+
+    .centered-img {
+        display: block;
+        margin: 1.5rem auto;
+        max-width: 200px;
+        border-radius: 12px;
+    }
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        padding: 2rem 1rem;
+        color: #555;
+        font-size: 0.9rem;
+    }
+
+    footer i {
+        color: #ff6f61;
+    }
+
+    /* ANIMATION */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+        header h1 {
+            font-size: 1.8rem;
+        }
+        section {
+            padding: 1.4rem;
+        }
+    }
+</style>
+</head>
+
 <body>
+
 <header>
-<h1> Journée de Lundi 22 juin </h1>
-<p><a href="index.html">
-←Retour à l'accueil</a></p>
+    <h1>Journée de Lundi 22 juin</h1>
+    <p><a href="index.html"><i class="fa-solid fa-arrow-left"></i> Retour à l'accueil</a></p>
 </header>
+
 <main>
+
 <section>
-<h2>Activité du matin</h2>
-    <p>Au cours de la matinée, nous avons commencé par une conférence consacrée aux métiers du numérique.
-Nous y avons découvert la définition du numérique ainsi que les qualités nécessaires pour travailler dans ce domaine.
+    <h2><i class="fa-solid fa-briefcase"></i> Activité du matin</h2>
 
-L’intervenant nous a ensuite présenté les ESN (Entreprises de Services du Numérique), puis il a évoqué sa propre entreprise,
-<a href="https://www.kpf-si.com/">KPF SI</a> fondée en 1989.
-<BR>Pour conclure, nous avons échangé sur l’impact de l’intelligence artificielle dans le secteur du numérique et sur l’évolution des métiers liés à ce domaine.
+    <p>
+        Au cours de la matinée, nous avons commencé par une conférence consacrée aux métiers du numérique.
+        Nous y avons découvert la définition du numérique ainsi que les qualités nécessaires pour travailler dans ce domaine.
+    </p>
 
-<img src="https://static.vecteezy.com/system/resources/previews/038/335/809/non_2x/kfp-letter-logo-design-inspiration-for-a-unique-identity-modern-elegance-and-creative-design-watermark-your-success-with-the-striking-this-logo-vector.jpg" alt="KPF SI"width="200" height="200">
+    <p>
+        L’intervenant nous a ensuite présenté les ESN (Entreprises de Services du Numérique), puis il a évoqué sa propre entreprise,
+        <a href="https://www.kpf-si.com/">KPF SI</a> fondée en 1989.
+    </p>
 
-</p>
-        <h2>Activité de l'après-midi</h2>
-        <p>Nous avons repris à 14h jusqu'à 17h. Nous avons travaillé sur nos portefolios, en nous concentrant sur la partie développement web. Nous avons utilisé HTML, CSS et JavaScript pour créer des pages web attrayantes et fonctionnelles.
-            Nous avons également appris à utiliser des outils de développement tels que Visual Studio Code et GitHub pour gérer notre code et collaborer avec nos coéquipiers.
-        <img src="https://tse3.mm.bing.net/th/id/OIP.Nl2NnLUSINXh-Iexj65F5QHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="vs code"width="250" height="200">
+    <p>
+        Pour conclure, nous avons échangé sur l’impact de l’intelligence artificielle dans le secteur du numérique
+        et sur l’évolution des métiers liés à ce domaine.
+    </p>
 
-        </p>
-        <h2>Conclusion</h2>
-        <p>En conclusion, cette journée a été très enrichissante et nous a permis d'acquérir de nouvelles compétences en développement web. Nous avons hâte de continuer à travailler sur nos portefolios et de mettre en pratique ce que nous avons appris.</p>
-        </p>
+    <img src="https://static.vecteezy.com/system/resources/previews/038/335/809/non_2x/kfp-letter-logo-design-inspiration-for-a-unique-identity-modern-elegance-and-creative-design-watermark-your-success-with-the-striking-this-logo-vector.jpg"
+         alt="KPF SI"
+         class="centered-img">
 </section>
+
+<section>
+    <h2><i class="fa-solid fa-laptop-code"></i> Activité de l'après-midi</h2>
+
+    <p>
+        Nous avons repris à 14h jusqu'à 17h. Nous avons travaillé sur nos portefolios, en nous concentrant sur la partie développement web.
+        Nous avons utilisé HTML, CSS et JavaScript pour créer des pages web attrayantes et fonctionnelles.
+    </p>
+
+    <p>
+        Nous avons également appris à utiliser des outils de développement tels que Visual Studio Code et GitHub
+        pour gérer notre code et collaborer avec nos coéquipiers.
+    </p>
+
+    <img src="https://tse3.mm.bing.net/th/id/OIP.Nl2NnLUSINXh-Iexj65F5QHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"
+         alt="VS Code"
+         class="centered-img">
+</section>
+
+<section>
+    <h2><i class="fa-solid fa-star"></i> Conclusion</h2>
+
+    <p>
+        En conclusion, cette journée a été très enrichissante et nous a permis d'acquérir de nouvelles compétences en développement web.
+        Nous avons hâte de continuer à travailler sur nos portefolios et de mettre en pratique ce que nous avons appris.
+    </p>
+</section>
+
 </main>
+
 <footer>
-<p>© 2026 - Eugénie | Fait avec passion</p>
+    © 2026 - Eugénie | Fait avec passion <i class="fa-solid fa-heart"></i>
 </footer>
-<script src="script.js"></script>
+
 </body>
 </html>

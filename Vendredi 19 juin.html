@@ -3,36 +3,152 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vendredi</title>
+
+<!-- Icônes modernes -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
+    /* RESET */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     body {
-		background-color:#FAF0C5;
-		}
-        </style>
-<title>Mardi</title>
-<link rel="stylesheet" href="style.css"></head>
+        font-family: "Poppins", Arial, sans-serif;
+        background-color: #FAF0C5; /* TA COULEUR ORIGINALE */
+        color: #333;
+        line-height: 1.7;
+    }
+
+    /* HEADER */
+    header {
+        background: linear-gradient(135deg, #ffb86c, #ff6f61);
+        padding: 2.5rem 1rem;
+        text-align: center;
+        color: white;
+        border-radius: 0 0 25px 25px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    header a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+
+    /* MAIN */
+    main {
+        width: min(900px, 92%);
+        margin: 2rem auto;
+    }
+
+    /* SECTIONS */
+    section {
+        background: white;
+        padding: 1.8rem;
+        border-radius: 18px;
+        margin-bottom: 2rem;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+        animation: fadeIn 0.6s ease;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        color: #ff6f61;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    section p {
+        margin-bottom: 1rem;
+    }
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        padding: 2rem 1rem;
+        color: #555;
+        font-size: 0.9rem;
+    }
+
+    footer i {
+        color: #ff6f61;
+    }
+
+    /* ANIMATION */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+        header h1 {
+            font-size: 1.8rem;
+        }
+        section {
+            padding: 1.4rem;
+        }
+    }
+</style>
+</head>
+
 <body>
-    <header>
-<h1> Journée de Vendredi 19 juin </h1>
-<p><a href="index.html">
-←Retour à l'accueil</a></p>
+
+<header>
+    <h1>Journée du Vendredi 19 juin</h1>
+    <p><a href="index.html"><i class="fa-solid fa-arrow-left"></i> Retour à l'accueil</a></p>
 </header>
+
 <main>
+
 <section>
-<h2>Activité du matin</h2>
-    <p>Au cours de la matinée, nous avons débuté par une conférence consacrée à l'IA génerative en distanciel. Nous avons génére l'accueil d'une site pour protéger les océans,et ensuite nous avons fait une maquette d'un site en rapport avec catégorie donnée tels que les jeux vidéos, un événement, un restaurant, ect.  
-        <h2>Activité de l'après-midi</h2>
-        <p>Nous avons repris à 14h jusqu'à 17h.Nous avons continué à travailler sur notre projet de portfolio, en nous concentrant sur la mise en page et l'organisation des informations et le programme de la 1ère semaine.
-            Nous avons également eu l'occasion de recevoir des retours constructifs de la part des étudiants, ce qui nous a permis d'améliorer notre travail.
-       </p>
-        <h2>Conclusion</h2>
-        <p>En conclusion, cette journée a été très productive et enrichissante.
-            Nous avons pu approfondir nos connaissances sur le sujet de la conférence et progresser dans notre projet de portfolio. Nous sommes impatients de continuer à travailler sur ce projet et de le présenter lors de la prochaine séance.
-       </p>
+    <h2><i class="fa-solid fa-lightbulb"></i> Activité du matin</h2>
+
+    <p>
+        Au cours de la matinée, nous avons débuté par une conférence consacrée à l'IA générative en distanciel.
+        Nous avons généré l'accueil d'un site pour protéger les océans, puis réalisé une maquette d'un site
+        en rapport avec une catégorie donnée : jeux vidéos, événement, restaurant, etc.
+    </p>
+
+    <h2><i class="fa-solid fa-laptop-code"></i> Activité de l'après-midi</h2>
+
+    <p>
+        Nous avons repris à 14h jusqu'à 17h. Nous avons continué à travailler sur notre projet de portfolio,
+        en nous concentrant sur la mise en page, l'organisation des informations et le programme de la 1ère semaine.
+    </p>
+
+    <p>
+        Nous avons également eu l'occasion de recevoir des retours constructifs de la part des étudiants,
+        ce qui nous a permis d'améliorer notre travail.
+    </p>
+
+    <h2><i class="fa-solid fa-star"></i> Conclusion</h2>
+
+    <p>
+        En conclusion, cette journée a été très productive et enrichissante.
+        Nous avons pu approfondir nos connaissances sur le sujet de la conférence et progresser dans notre projet de portfolio.
+        Nous sommes impatients de continuer à travailler sur ce projet et de le présenter lors de la prochaine séance.
+    </p>
 </section>
+
 </main>
+
 <footer>
-<p>© 2026 - Eugénie | Fait avec passion</p>
+    © 2026 - Eugénie | Fait avec passion <i class="fa-solid fa-heart"></i>
 </footer>
-<script src="script.js"></script>
+
 </body>
 </html>
