@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeudi 18 juin</title>
+
+<!-- Icônes modernes -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    /* RESET */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Poppins", Arial, sans-serif;
+        background-color: #FAF0C5; /* Couleur d'origine */
+        color: #333;
+        line-height: 1.7;
+    }
+
+    /* HEADER */
+    header {
+        background: linear-gradient(135deg, #ffb86c, #ff6f61);
+        padding: 2.5rem 1rem;
+        text-align: center;
+        color: white;
+        border-radius: 0 0 25px 25px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    header a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+
+    /* MAIN */
+    main {
+        width: min(900px, 92%);
+        margin: 2rem auto;
+    }
+
+    /* SECTIONS */
+    section {
+        background: white;
+        padding: 1.8rem;
+        border-radius: 18px;
+        margin-bottom: 2rem;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+        animation: fadeIn 0.6s ease;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        color: #ff6f61;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    section p {
+        margin-bottom: 1rem;
+    }
+
+    .centered-img {
+        display: block;
+        margin: 1.5rem auto;
+        max-width: 300px;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        padding: 2rem 1rem;
+        color: #555;
+        font-size: 0.9rem;
+    }
+
+    footer i {
+        color: #ff6f61;
+    }
+
+    /* ANIMATION */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+        header h1 {
+            font-size: 1.8rem;
+        }
+        section {
+            padding: 1.4rem;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Journée du Jeudi 18 juin</h1>
+    <p><a href="index.html"><i class="fa-solid fa-arrow-left"></i> Retour à l'accueil</a></p>
+</header>
+
+<main>
+
+<section>
+    <h2><i class="fa-solid fa-shield-halved"></i> Activité du matin</h2>
+
+    <p>
+        La matinée a débuté par une conférence consacrée aux méthodes d’apprentissage,
+        illustrée à travers un Kahoot et plusieurs interventions d’élèves de seconde.
+        Cette présentation a été animée par <strong>Gaspard</strong>.
+    </p>
+
+    <p>
+        Nous avons ensuite participé à un atelier créatif utilisant des <strong>Lego</strong>.
+        L’objectif était d’imaginer puis de dessiner une construction avant de la réaliser
+        en briques, le tout dans un temps limité. Nous disposions de <strong>45 minutes</strong>
+        pour mener à bien cette activité.
+    </p>
+</section>
+
+<section>
+    <h2><i class="fa-solid fa-laptop-code"></i> Activité de l'après-midi</h2>
+
+    <p>
+        L’après-midi, nous avons travaillé sur la recréation d’un <strong>jeu Arduino</strong>.
+        Les consignes étaient guidées par des étudiants de <strong>1ère et 2ème année</strong>,
+        qui nous ont accompagnés tout au long de l’exercice.
+    </p>
+
+    <img src="https://jeux-arduino.fr/media/posts/2/gallery/1.jpeg"
+         alt="Jeu Arduino"
+         class="centered-img">
+</section>
+
+<section>
+    <h2><i class="fa-solid fa-star"></i> Conclusion</h2>
+
+    <p>
+        Cette journée a été particulièrement enrichissante : elle nous a permis de développer
+        de nouvelles compétences et d’améliorer nos méthodes d’apprentissage.
+    </p>
+
+    <p>
+        Nous avons également pu travailler en équipe et bénéficier de retours constructifs,
+        ce qui nous a aidés à progresser dans nos activités.
+    </p>
+</section>
+
+</main>
+
+<footer>
+    © 2026 - Eugénie | Fait avec passion <i class="fa-solid fa-heart"></i>
+</footer>
+
+</body>
+</html>
