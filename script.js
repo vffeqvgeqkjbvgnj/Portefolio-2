@@ -1,112 +1,126 @@
-<<<<<<< HEAD
-   // --- Récupération du compteur sauvegardé ---
-            let nbLikes = localStorage.getItem("nbLikes");
-            if (!nbLikes) nbLikes = 0;
+/* Texte animé */
 
-            const boutonLike = document.getElementById("mon-bouton-like");
-            const boutonUnlike = document.getElementById("bouton-unlike");
-            const message = document.getElementById("message-like");
+const texte = "Bonjour, je suis Célina 👋";
+const titre = document.getElementById("typing");
 
-            // Affichage initial
-            boutonLike.textContent = "❤ J'aime (" + nbLikes + ")";
+let i = 0;
 
-            // --- Clic sur "J'aime" ---
-            boutonLike.addEventListener("click", () => {
-                nbLikes++;
-                localStorage.setItem("nbLikes", nbLikes);
+function machineAEcrire() {
 
-                boutonLike.textContent = "❤ J'aime (" + nbLikes + ")";
+    if(i < texte.length){
+        titre.innerHTML += texte.charAt(i);
+        i++;
+        setTimeout(machineAEcrire, 100);
+    }
 
-                // Animation
-                boutonLike.classList.add("like-anim");
-                setTimeout(() => boutonLike.classList.remove("like-anim"), 300);
+}
 
-                // Message temporaire
-                message.textContent = "Merci pour votre soutien ❤️";
-                message.classList.add("visible");
-                setTimeout(() => message.classList.remove("visible"), 2000);
-            });
+machineAEcrire();
 
-            // --- Clic sur "Je n'aime plus" ---
-            boutonUnlike.addEventListener("click", () => {
-                if (nbLikes > 0) {
-                    nbLikes--;
-                    localStorage.setItem("nbLikes", nbLikes);
-                }
+/* Boutons Like */
 
-                boutonLike.textContent = "❤ J'aime (" + nbLikes + ")";
+let likes = 0;
 
-                // Animation
-                boutonUnlike.classList.add("unlike-anim");
-                setTimeout(() => boutonUnlike.classList.remove("unlike-anim"), 300);
+const boutonLike = document.getElementById("mon-bouton-like");
+const boutonUnlike = document.getElementById("bouton-unlike");
+const message = document.getElementById("message-like");
 
-                // Message temporaire
-                message.textContent = "Votre like a été retiré 💔";
-                message.classList.add("visible");
-                setTimeout(() => message.classList.remove("visible"), 2000);
-            });
+boutonLike.addEventListener("click", () => {
 
-const btnCulture = document.getElementById("btnCulture");
-const infoCulture = document.getElementById("infoCulture");
+    likes++;
 
-btnCulture.addEventListener("click", () => {
+    boutonLike.innerHTML = `❤️ J'aime (${likes})`;
 
-const infos = [
-    "Yennayer est le Nouvel An amazigh.",
-    "La robe kabyle est connue pour ses couleurs vives.",
-    "Les villages kabyles sont souvent construits sur les montagnes.",
-    "Les bijoux kabyles traditionnels sont fabriqués en argent."
-];
+    if(likes === 5){
+        message.innerHTML = "🌸 Merci pour votre soutien !";
+    }
 
-document.getElementById("cultureBtn").addEventListener("click", () => {
-
-    let hasard = Math.floor(Math.random() * infos.length);
-
-    document.getElementById("cultureInfo").innerHTML =
-    "<h3>" + infos[hasard] + "</h3>";
+    if(likes === 10){
+        message.innerHTML = "🚀 Déjà 10 likes, merci beaucoup !";
+    }
 
 });
 
-function quiz(rep){
+boutonUnlike.addEventListener("click", () => {
 
-    const resultat = document.getElementById("resultat");
+    if(likes > 0){
 
-    if(rep === "b"){
-        resultat.innerHTML = "✅ Bravo !";
+        likes--;
+
+        boutonLike.innerHTML = `❤️ J'aime (${likes})`;
+
+    }
+
+});
+
+/* Bouton retour en haut */
+
+const topBtn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 300){
+        topBtn.style.display = "block";
     }
     else{
-        resultat.innerHTML = "❌ La bonne réponse était Yennayer.";
+        topBtn.style.display = "none";
     }
-}
 
-document.getElementById("explorer").addEventListener("click", () => {
+});
+
+topBtn.addEventListener("click", () => {
 
     window.scrollTo({
-        top: window.innerHeight,
+        top:0,
         behavior:"smooth"
     });
 
 });
-=======
 
-// Compteur de clics personnalisé
-let nbLikes = 0;
-const boutonLike = document.getElementById("mon-bouton-like");
+/* Apparition sections */
 
-if (boutonLike) {
-    boutonLike.addEventListener("click", () =>{
-        nbLikes = nbLikes + 1; 
-boutonLike.textContent = "❤️ J'aime (" + nbLikes + ")";
+const sections = document.querySelectorAll("section");
+
+sections.forEach(section => {
+    section.classList.add("hidden");
 });
-}
-// Compteur de clics personnalisé
-let nbdisLikes = 0;
-const boutondisLike = document.getElementById("mon-bouton-dislike");
 
-if (boutondisLike) {
-    boutondisLike.addEventListener("click", () =>{
-        nbdisLikes = nbdisLikes + 1; 
-boutondisLike.textContent = "💔 Je n'aime pas (" + nbdisLikes + ")";
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
 });
-}
->>>>>>> bea4041ba2bfade01942b546761bc6e4645ec94d
+
+sections.forEach(section => {
+
+    observer.observe(section);
+
+});
+
+/* Animation des cartes */
+
+const cartes = document.querySelectorAll(".card");
+
+cartes.forEach(carte => {
+
+    carte.addEventListener("click", () => {
+
+        carte.style.transform = "scale(1.1)";
+
+        setTimeout(() => {
+
+            carte.style.transform = "";
+
+        }, 300);
+
+    });
+
+});
