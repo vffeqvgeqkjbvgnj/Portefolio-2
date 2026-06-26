@@ -1,40 +1,123 @@
 <!DOCTYPE html>
 <html lang="fr">
-	
 <head>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bouton Like Amélioré</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Eugénie</title>
+
+    <!-- Icônes modernes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-        /* Style des boutons */
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            background: #f7f4ff;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #ff7aa2, #7b6cff);
+            padding: 3rem 1rem;
+            text-align: center;
+            color: white;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* MAIN */
+        main {
+            width: min(900px, 92%);
+            margin: 2rem auto;
+        }
+
+        /* SECTIONS */
+        section {
+            background: white;
+            padding: 1.8rem;
+            border-radius: 18px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+            animation: fadeIn 0.6s ease;
+        }
+
+        section h2 {
+            font-size: 1.7rem;
+            margin-bottom: 1rem;
+            color: #7b6cff;
+        }
+
+        section h4 {
+            margin-top: 1rem;
+            color: #ff4b7a;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: #ff4b7a;
+        }
+
+        /* IMAGES */
+        .centered-img {
+            display: block;
+            margin: 1.5rem auto;
+            max-width: 120px;
+        }
+
+        /* LIKE BUTTONS */
+        .like-container {
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
         button {
-            padding: 5px 10px;
-            font-size: 1.1rem;
+            padding: 0.7rem 1.4rem;
+            border-radius: 999px;
             border: none;
-            border-radius: 8px;
             cursor: pointer;
-            margin-right: 10px;
-            transition: transform 0.2s ease, background-color 0.3s ease;
+            font-size: 1rem;
+            transition: 0.15s ease;
         }
 
-        /* Animation au clic */
-        .like-anim {
-            transform: scale(1.15);
-            background-color: #ccffd6; /* vert très clair */
+        #mon-bouton-like {
+            background: #ff7aa2;
+            color: white;
+            box-shadow: 0 6px 14px rgba(255, 122, 162, 0.35);
         }
 
-        /* Bouton "Je n'aime plus" */
         #bouton-unlike {
-            background-color: #ffe5e5; /* rose très clair */
+            background: #ffe5e5;
+            color: #444;
         }
 
-        #bouton-unlike.unlike-anim {
-            transform: scale(1.15);
-            background-color: #ffcccc;
+        #mon-bouton-like:hover,
+        #bouton-unlike:hover {
+            transform: translateY(-2px);
         }
 
-        /* Message temporaire */
         .message-like {
             opacity: 0;
             margin-top: 10px;
@@ -46,101 +129,134 @@
         .message-like.visible {
             opacity: 1;
         }
-		
-		.centered-img {
-            display: block;       /* Nécessaire pour margin auto */
-            margin: 0 auto;       /* Centre horizontalement */
-            max-width: 100%;      /* Évite le dépassement */
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        footer i {
+            color: #ff4b7a;
+        }
+
+        /* ANIMATION */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* MOBILE OPTIMISATION */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.9rem;
+            }
+            section {
+                padding: 1.4rem;
+            }
         }
     </style>
-    <title>Portfolio - Eugénie</title>
-	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <BODY bgcolor=F4C9FF></BODY>
-<h1> Bienvenue sur le portefolio d'Eugénie !</h1>
-<p><a href="index.html">← Retour à l'accueil </a> </p>
+
+<header>
+    <h1>Bienvenue sur le portefolio d'Eugénie !</h1>
+    <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Retour à l'accueil</a>
 </header>
-	<main>
-		<BR>Je m'appelle Eugénie Allègre, je suis née le 01/04/2010 à Paris. Je suis actuellement scolarisée à Notre Dame de Sion à Sait-Omer en classe de seconde.
-		<BR>J'ai deux petits frères agés de 11 et 14 ans qui se prenoment respectivement Octave et Maxence. Nous ne possedons pas d'animaux de compagnie, mais j'aime beaucoup les reptiles et les chats.
-		<BR>Je suis une personne curieuse, passionnée et déterminée. Je suis également très sociable et j'apprécie les échanges avec les autres, que ce soit pour partager des idées ou simplement passer du temps ensemble.
-		<img src="https://tse4.mm.bing.net/th/id/OIP.UQ0qd4VC-krve6DzzDbTOQHaHa?cb=thfc1falcon2&rs=1&pid=ImgDetMain&o=7&rm=3" alt="logo nd de sion" widh="100" height="100" class="centered-img">
-    
-		<section>
-			<h2>À propos de moi</h2>
-			<h4>Mes passions</h4>
-			<p> Mes passions tournent autour de la lecture, de la musique et de la mode, trois domaines qui occupent une grande place dans ma vie.
 
-				<BR>J’aime particulièrement lire des romans policiers et les thrillers, parce que les enquêtes et les rebondissements me tiennent toujours en haleine. Je lis aussi beaucoup de new romance et de dark romance, des genres qui me permettent de m’évader et de vivre des histoires intenses à travers les personnages.
-				J'aime particuliairement Mary Higgins CLack, Frida McFadden pour les policiers et thrillers. Egalement Ana Huang, Morgane Mocombe et Sarah Rivens pour les new romance et dark romance.
-				<BR>Côté musique, même si la pop reste mon style préféré, je suis assez curieuse et j’écoute vraiment un peu de tout. Découvrir de nouveaux artistes ou de nouveaux sons me plaît beaucoup, et ça accompagne souvent mes journées.
-				<BR>En ce qui concerne la mode, j’aime suivre les tendances et exprimer ma créativité à travers mes tenues. J’adore mélanger les styles et trouver des pièces uniques qui reflètent ma personnalité. La mode est pour moi une forme d’art et un moyen de m’affirmer.
-			</p>
-			<h4>Mes projets</h4>
-				<p>En ce qui concerne mes projets, j’ai plusieurs idées en tête que j’aimerais réaliser dans les prochaines années. Tout d’abord, j’aimerais approfondir mes connaissances en littérature et peut-être même écrire mon propre roman un jour. J’ai toujours aimé raconter des histoires, et je pense que ce serait une expérience enrichissante de créer un univers à partir de zéro.
-				<BR>En parallèle, je m’intéresse aussi beaucoup à la cybersécurité. C’est un domaine qui évolue très vite et qui joue un rôle essentiel dans notre société actuelle. Protéger des données, comprendre les menaces numériques et contribuer à la sécurité des systèmes informatiques sont des missions qui me passionnent. 
-				<BR>J’aimerais donc, si possible, me diriger également vers cette voie ou trouver un moyen de concilier ces deux univers qui me plaisent pour des raisons différentes.
-			</p>
-		</section>
-	</main>
-<footer>
-        <p>© 2026 - Eugénie | Fait avec passion</p>
+<main>
 
-        <button id="mon-bouton-like">❤ J'aime (0)</button>
-        <button id="bouton-unlike">💔 Je n'aime plus</button>
+    <section>
+        <h2>À propos de moi</h2>
+        <p>Je m'appelle <span class="highlight">Eugénie Allègre</span>, née le 01/04/2010 à Paris.</p>
+        <p>Je suis scolarisée à <span class="highlight">Notre Dame de Sion</span> à Saint-Omer.</p>
+        <p>J'ai deux petits frères : <span class="highlight">Octave</span> et <span class="highlight">Maxence</span>.</p>
+        <p>J'aime les reptiles et les chats.</p>
+
+        <img src="https://tse4.mm.bing.net/th/id/OIP.UQ0qd4VC-krve6DzzDbTOQHaHa"
+             alt="Logo ND de Sion"
+             class="centered-img">
+    </section>
+
+    <section>
+        <h2>Mes passions</h2>
+        <p>Lecture, musique, mode… trois univers qui me définissent.</p>
+
+        <h4><i class="fa-solid fa-book"></i> Lecture</h4>
+        <p>Romans policiers, thrillers, new romance, dark romance…</p>
+
+        <h4><i class="fa-solid fa-music"></i> Musique</h4>
+        <p>J’écoute surtout de la pop, mais je suis ouverte à tout.</p>
+
+        <h4><i class="fa-solid fa-shirt"></i> Mode</h4>
+        <p>La mode est pour moi une forme d’art et un moyen de m’exprimer.</p>
+    </section>
+
+    <section>
+        <h2><i class="fa-solid fa-stethoscope"></i> Mes projets</h2>
+
+        <p>
+            Mon objectif est de devenir <span class="highlight">chirurgienne esthétique</span>.
+        </p>
+
+        <p>
+            Ce domaine me passionne car il combine précision médicale, sens artistique 
+            et accompagnement des personnes dans leur confiance en elles.
+        </p>
+
+        <p>
+            Je souhaite suivre des études de médecine, me spécialiser en chirurgie plastique,
+            reconstructrice et esthétique, et développer des compétences scientifiques,
+            humaines et artistiques.
+        </p>
+
+        <div class="like-container">
+            <button id="mon-bouton-like">❤ J'aime (0)</button>
+            <button id="bouton-unlike">💔 Je n'aime plus</button>
+        </div>
 
         <div id="message-like" class="message-like"></div>
+    </section>
 
-        <script>
-            // --- Récupération du compteur sauvegardé ---
-            let nbLikes = localStorage.getItem("nbLikes");
-            if (!nbLikes) nbLikes = 0;
+</main>
 
-            const boutonLike = document.getElementById("mon-bouton-like");
-            const boutonUnlike = document.getElementById("bouton-unlike");
-            const message = document.getElementById("message-like");
+<footer>
+    © 2026 - Eugénie | Fait avec passion <i class="fa-solid fa-heart"></i>
+</footer>
 
-            // Affichage initial
-            boutonLike.textContent = "❤ J'aime (" + nbLikes + ")";
+<script>
+    let nbLikes = localStorage.getItem("nbLikes");
+    if (!nbLikes) nbLikes = 0;
 
-            // --- Clic sur "J'aime" ---
-            boutonLike.addEventListener("click", () => {
-                nbLikes++;
-                localStorage.setItem("nbLikes", nbLikes);
+    const boutonLike = document.getElementById("mon-bouton-like");
+    const boutonUnlike = document.getElementById("bouton-unlike");
+    const message = document.getElementById("message-like");
 
-                boutonLike.textContent = "❤ J'aime (" + nbLikes + ")";
+    boutonLike.textContent = "❤ J'aime (" + nbLikes + ")";
 
-                // Animation
-                boutonLike.classList.add("like-anim");
-                setTimeout(() => boutonLike.classList.remove("like-anim"), 300);
+    boutonLike.addEventListener("click", () => {
+        nbLikes++;
+        localStorage.setItem("nbLikes", nbLikes);
+        boutonLike.textContent = "❤ J'aime (" + nbLikes + ")";
+        message.textContent = "Merci pour votre soutien ❤️";
+        message.classList.add("visible");
+        setTimeout(() => message.classList.remove("visible"), 2000);
+    });
 
-               // Message temporaire
-                message.textContent = "Merci pour votre soutien ❤️";
-                message.classList.add("visible");
-                setTimeout(() => message.classList.remove("visible"), 2000);
-            });
+    boutonUnlike.addEventListener("click", () => {
+        if (nbLikes > 0) {
+            nbLikes--;
+            localStorage.setItem("nbLikes", nbLikes);
+        }
+        boutonLike.textContent = "❤ J'aime (" + nbLikes + ")";
+        message.textContent = "Votre like a été retiré 💔";
+        message.classList.add("visible");
+        setTimeout(() => message.classList.remove("visible"), 2000);
+    });
+</script>
 
-            // --- Clic sur "Je n'aime plus" ---
-            boutonUnlike.addEventListener("click", () => {
-                if (nbLikes > 0) {
-                    nbLikes--;
-                    localStorage.setItem("nbLikes", nbLikes);
-                }
-
-                boutonLike.textContent = "❤ J'aime (" + nbLikes + ")";
-
-                // Animation
-                boutonUnlike.classList.add("unlike-anim");
-                setTimeout(() => boutonUnlike.classList.remove("unlike-anim"), 300);
-
-                // Message temporaire
-                message.textContent = "Votre like a été retiré 💔";
-                message.classList.add("visible");
-                setTimeout(() => message.classList.remove("visible"), 2000);
-            });
-        </script>
-    </footer>
 </body>
 </html>
