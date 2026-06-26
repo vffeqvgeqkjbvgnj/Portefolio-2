@@ -57,17 +57,21 @@ function next_direction() {
   snake_next_direction = null;
   if (snake_direction == "up") {
     snake_next_direction = [snake[0][0], snake[0][1] - 10];
-  } else if (snake_direction == "down") {
+ }
+ else if (snake_direction == "down") {
     snake_next_direction = [snake[0][0], snake[0][1] + 10];
-  } else if (snake_direction == "left") {
+ }
+ else if (snake_direction == "left") {
     snake_next_direction = [snake[0][0] - 10, snake[0][1]];
-  } else if (snake_direction == "right") {
+ }
+ else if (snake_direction == "right") {
     snake_next_direction = [snake[0][0] + 10, snake[0][1]];
   }
 }
 
 function move_snake() {
   check_collision();
+  exit_arena();
   head = snake[0];
   eat = false;
   apples.forEach((apple) => {
@@ -97,7 +101,18 @@ function check_collision() {
     }
   });
 }
-
+function exit_arena() {
+  if (snake_next_direction[0] < 0) {
+    snake_next_direction[0] = 390;
+  } else if (snake_next_direction[0] >= 400) {
+    snake_next_direction[0] = 0;
+  }
+  if (snake_next_direction[1] < 0) {
+    snake_next_direction[1] = 390;
+  } else if (snake_next_direction[1] >= 400) {
+    snake_next_direction[1] = 0;  
+  }
+}
 function draw() {
   background(20, 30, 50); 
   
