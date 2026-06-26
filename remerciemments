@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 from turtle import *
 
 ecran = Screen()
@@ -27,7 +28,7 @@ forward(45)
 forward(45)
 
 # Dire a
-write("a", align="center", font=("Arial", 50, "bold"))
+write( "\u00e0", align="center", font=("Arial", 50, "bold"))
 forward(45)
 
 # Espace 
