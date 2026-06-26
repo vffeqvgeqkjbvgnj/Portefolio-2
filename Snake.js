@@ -11,6 +11,12 @@ function setup() {
   
   apples = [];
   create_apples();
+  stars = [] ;
+  create_stars();
+  diamonds = [];
+  create_diamonds();
+  dices = [];
+  create_dices();
   score = 0;
 }
 
@@ -20,6 +26,48 @@ function create_apples() {
     y = Math.floor(random(0, 40));
     apples.push([x * 10, y * 10]);
   }
+}
+function create_stars() {
+  for (i = 0; i < 5; i++) {
+    x = Math.floor(random(0, 40));
+    y = Math.floor(random(0, 40));
+    stars.push([x * 10, y * 10]);
+  }
+}
+function draw_stars() {
+  textSize(10); 
+  textAlign(CENTER, CENTER); 
+  stars.forEach((star) => {
+    text("⭐", star[0] + 5, star[1] + 5); 
+  });
+}
+function create_diamonds() {
+  for (i = 0; i < 1; i++) {
+    x = Math.floor(random(0, 40));
+    y = Math.floor(random(0, 40));
+    diamonds.push([x * 10, y * 10]);
+  }
+}
+function draw_diamonds() {
+  textSize(10); 
+  textAlign(CENTER, CENTER); 
+  diamonds.forEach((diamond) => {
+    text("💎", diamond[0] + 5, diamond[1] + 5); 
+  });
+}
+function create_dices() {
+  for (i = 0; i < 1; i++) {
+    x = Math.floor(random(0, 40));
+    y = Math.floor(random(0, 40));
+    dices.push([x * 10, y * 10]);
+  }
+}
+function draw_dices() {
+  textSize(10); 
+  textAlign(CENTER, CENTER); 
+  dices.forEach((dice) => {
+    text("🎲", dice[0] + 5, dice[1] + 5); 
+  });
 }
 
 function draw_apples() {
@@ -86,7 +134,61 @@ function move_snake() {
       let new_y = Math.floor(random(0, 40));
       apples.push([new_x * 10, new_y * 10]);
     }
-  });
+  })
+  stars.forEach((star) => {
+    if (head[0] == star[0] && head[1] == star[1]) {
+      pos = stars.indexOf(star);
+      stars.splice(pos, 1);
+      eat = true;
+      
+      score += 20; 
+
+      let new_x1 = Math.floor(random(0, 40));
+      let new_y1 = Math.floor(random(0, 40));
+      stars.push([new_x1 * 10, new_y1 * 10]);
+      snake.unshift(snake_next_direction); 
+    }
+  })
+  diamonds.forEach((diamond) => {
+    if (head[0] == diamond[0] && head[1] == diamond[1]) {
+      pos = diamonds.indexOf(diamond);
+      diamonds.splice(pos, 1);
+      eat = true;
+      
+      score += 50; 
+
+      let new_x2 = Math.floor(random(0, 40));
+      let new_y2 = Math.floor(random(0, 40));
+      diamonds.push([new_x2 * 10, new_y2 * 10]);
+      snake.unshift(snake_next_direction); 
+      snake.unshift(snake_next_direction); 
+      snake.unshift(snake_next_direction); 
+      snake.unshift(snake_next_direction); 
+    }
+  })
+  dices.forEach((dice) => {
+    if (head[0] == dice[0] && head[1] == dice[1]) {
+      pos = dices.indexOf(dice);
+      dices.splice(pos, 1);
+      eat = true;
+      alea= Math.floor(random(1,3))
+      if (snake.length > 10){
+       if (alea==1){
+        score += 100; 
+        for (tkt=0; tkt<9;tkt++){
+        snake.unshift([snake_next_direction[0],snake_next_direction[1]]);
+       }}
+       if (alea==2){
+        score -= 100; 
+        for (tktap=0; tktap<11;tktap++){
+        snake.pop();
+      }}
+      let new_x4 = Math.floor(random(0, 40));
+      let new_y4 = Math.floor(random(0, 40));
+      dices.push([new_x4 * 10, new_y4 * 10]);
+      snake.unshift(snake_next_direction); 
+    }
+}});
   if (eat == false) {
     snake.pop(); 
   }
@@ -133,6 +235,9 @@ function draw() {
   });
   
   draw_apples();
+  draw_stars();
+  draw_diamonds();
+  draw_dices()
 
   fill(255);
   noStroke();
