@@ -15,8 +15,6 @@ function setup() {
   create_stars();
   diamonds = [];
   create_diamonds();
-  dices = [];
-  create_dices();
   score = 0;
 }
 
@@ -53,20 +51,6 @@ function draw_diamonds() {
   textAlign(CENTER, CENTER); 
   diamonds.forEach((diamond) => {
     text("💎", diamond[0] + 5, diamond[1] + 5); 
-  });
-}
-function create_dices() {
-  for (i = 0; i < 1; i++) {
-    x = Math.floor(random(0, 40));
-    y = Math.floor(random(0, 40));
-    dices.push([x * 10, y * 10]);
-  }
-}
-function draw_dices() {
-  textSize(10); 
-  textAlign(CENTER, CENTER); 
-  dices.forEach((dice) => {
-    text("🎲", dice[0] + 5, dice[1] + 5); 
   });
 }
 
@@ -165,30 +149,7 @@ function move_snake() {
       snake.unshift(snake_next_direction); 
       snake.unshift(snake_next_direction); 
     }
-  })
-  dices.forEach((dice) => {
-    if (head[0] == dice[0] && head[1] == dice[1]) {
-      pos = dices.indexOf(dice);
-      dices.splice(pos, 1);
-      eat = true;
-      alea= Math.floor(random(1,3))
-      if (snake.length > 10){
-       if (alea==1){
-        score += 100; 
-        for (tkt=0; tkt<9;tkt++){
-        snake.unshift([snake_next_direction[0],snake_next_direction[1]]);
-       }}
-       if (alea==2){
-        score -= 100; 
-        for (tktap=0; tktap<11;tktap++){
-        snake.pop();
-      }}
-      let new_x4 = Math.floor(random(0, 40));
-      let new_y4 = Math.floor(random(0, 40));
-      dices.push([new_x4 * 10, new_y4 * 10]);
-      snake.unshift(snake_next_direction); 
-    }
-}});
+  });
   if (eat == false) {
     snake.pop(); 
   }
@@ -237,7 +198,6 @@ function draw() {
   draw_apples();
   draw_stars();
   draw_diamonds();
-  draw_dices()
 
   fill(255);
   noStroke();
